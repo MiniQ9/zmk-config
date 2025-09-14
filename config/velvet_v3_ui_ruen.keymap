@@ -119,9 +119,9 @@
 
         nav {
             bindings = <
-&trans  &none  &kp F1  &kp F2   &kp F3   &kp F4                     &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp INS          &kp HOME         &kp PG_UP
-&trans  &none  &kp F5  &kp F6   &kp F7   &kp F8                     &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp DELETE       &kp END          &kp PAGE_DOWN
-&trans  &none  &kp F9  &kp F10  &kp F11  &kp F12                    &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp RIGHT_ARROW  &kp RIGHT_ARROW  &kp KP_NUMBER_0
+&to 9   &none  &kp F1  &kp F2   &kp F3   &kp F4                     &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp INS         &kp HOME         &kp PG_UP
+&to 10  &none  &kp F5  &kp F6   &kp F7   &kp F8                     &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp DELETE      &kp END          &kp PAGE_DOWN
+&trans  &none  &kp F9  &kp F10  &kp F11  &kp F12                    &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp UP          &kp RIGHT_ARROW  &kp KP_NUMBER_0
                &none   &none    &trans   &trans   &trans    &trans  &mo 5            &trans           &kp LEFT         &kp DOWN_ARROW
             >;
 
@@ -191,6 +191,33 @@
             >;
 
             display-name = "Sniper";
+        };
+
+        SB {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                    &to 0   &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        Bers {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                    &to 0   &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        layer_11 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+            >;
         };
     };
 };
