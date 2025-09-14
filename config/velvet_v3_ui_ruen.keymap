@@ -25,13 +25,13 @@
         compatible = "zmk,combos";
 
         cmben {
-            bindings = <&layer_en>;
-            key-positions = <3 2>;
+            bindings = <&to_en>;
+            key-positions = <8 9>;
             layers = <1>;
         };
 
         cmbru {
-            bindings = <&layer_ru>;
+            bindings = <&to_ru>;
             key-positions = <3 2>;
             layers = <0>;
         };
@@ -101,7 +101,7 @@
 &kp ESC         &kp Q  &kp W         &kp E       &kp R      &kp T                             &kp Y  &kp U           &kp I      &kp O     &kp P     &kp BSPC
 &kp TAB         &kp A  &kp S         &kp D       &kp F      &kp G                             &kp H  &kp J           &kp K      &kp L     &kp SEMI  &kp BSLH
 &kp LEFT_SHIFT  &kp Z  &kp X         &kp C       &kp V      &kp B                             &kp N  &kp M           &kp COMMA  &kp DOT   &kp SQT   &kp ENTER
-                       &kp LEFT_GUI  &kp K_MENU  &kp LCTRL  &mo 2  &kp SPACE    &kp LEFT_ALT  &mo 3  &cap_sen 6 MB1  &kp LBKT   &kp RBKT
+                       &kp LEFT_GUI  &kp K_MENU  &sk LCTRL  &mo 2  &kp SPACE    &kp LEFT_ALT  &mo 3  &cap_sen 6 MB1  &kp LBKT   &kp RBKT
             >;
 
             display-name = "Base";
@@ -110,10 +110,10 @@
         ru {
             display-name = "Ru";
             bindings = <
-&trans  &kp RU_CYRILLIC_SHORT_I  &kp RU_CYRILLIC_TSE   &kp RU_CYRILLIC_U   &kp RU_CYRILLIC_KA  &kp RU_CYRILLIC_IE                             &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE        &kp RU_CYRILLIC_SHA  &kp RU_CYRILLIC_SHCHA      &kp RU_CYRILLIC_ZE   &trans
-&trans  &kp RU_CYRILLIC_EF       &kp RU_CYRILLIC_YERU  &kp RU_CYRILLIC_VE  &kp RU_CYRILLIC_A   &kp RU_CYRILLIC_PE                             &kp RU_CYRILLIC_ER  &kp RU_CYRILLIC_O          &kp RU_CYRILLIC_EL   &kp RU_CYRILLIC_DE         &kp RU_CYRILLIC_ZHE  &trans
-&trans  &kp RU_CYRILLIC_YA       &kp RU_CYRILLIC_CHE   &kp RU_CYRILLIC_ES  &kp RU_CYRILLIC_EM  &kp RU_CYRILLIC_I                              &kp RU_CYRILLIC_TE  &kp RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE   &kp RU_CYRILLIC_YU         &kp RU_CYRILLIC_E    &trans
-                                 &trans                &trans              &kp LCTRL           &mo 2               &kp SPACE    &kp LEFT_ALT  &mo 4               &cap_sen 6 MB1             &kp RU_CYRILLIC_HA   &kp RU_CYRILLIC_HARD_SIGN
+&trans  &kp RU_CYRILLIC_SHORT_I  &kp RU_CYRILLIC_TSE   &kp RU_CYRILLIC_U   &kp RU_CYRILLIC_KA  &kp RU_CYRILLIC_IE                    &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE        &kp RU_CYRILLIC_SHA  &kp RU_CYRILLIC_SHCHA      &kp RU_CYRILLIC_ZE   &trans
+&trans  &kp RU_CYRILLIC_EF       &kp RU_CYRILLIC_YERU  &kp RU_CYRILLIC_VE  &kp RU_CYRILLIC_A   &kp RU_CYRILLIC_PE                    &kp RU_CYRILLIC_ER  &kp RU_CYRILLIC_O          &kp RU_CYRILLIC_EL   &kp RU_CYRILLIC_DE         &kp RU_CYRILLIC_ZHE  &trans
+&trans  &kp RU_CYRILLIC_YA       &kp RU_CYRILLIC_CHE   &kp RU_CYRILLIC_ES  &kp RU_CYRILLIC_EM  &kp RU_CYRILLIC_I                     &kp RU_CYRILLIC_TE  &kp RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE   &kp RU_CYRILLIC_YU         &kp RU_CYRILLIC_E    &trans
+                                 &trans                &trans              &trans              &trans              &trans    &trans  &mo 4               &trans                     &kp RU_CYRILLIC_HA   &kp RU_CYRILLIC_HARD_SIGN
             >;
         };
 
@@ -121,7 +121,7 @@
             bindings = <
 &to 9   &none  &kp F1  &kp F2   &kp F3   &kp F4                     &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp INS         &kp HOME         &kp PG_UP
 &to 10  &none  &kp F5  &kp F6   &kp F7   &kp F8                     &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp DELETE      &kp END          &kp PAGE_DOWN
-&trans  &none  &kp F9  &kp F10  &kp F11  &kp F12                    &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp UP          &kp RIGHT_ARROW  &kp KP_NUMBER_0
+&none   &none  &kp F9  &kp F10  &kp F11  &kp F12                    &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp UP          &kp RIGHT_ARROW  &kp KP_NUMBER_0
                &none   &none    &trans   &trans   &trans    &trans  &mo 5            &trans           &kp LEFT         &kp DOWN_ARROW
             >;
 
@@ -151,10 +151,10 @@
 
         adj {
             bindings = <
-&bootloader  &none  &none  &none  &none  &none                  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2      &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR
-&none        &none  &none  &none  &none  &none                  &out OUT_BLE  &kp C_VOL_DN  &kp K_MUTE        &kp C_VOL_UP  &none         &studio_unlock
-&none        &none  &none  &none  &none  &none                  &out OUT_USB  &kp K_PREV    &kp K_PLAY_PAUSE  &kp K_NEXT    &none         &none
-                    &none  &none  &none  &none  &none    &none  &none         &none         &none             &none
+&bootloader  &none  &none       &none  &none  &none                  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2      &bt BT_SEL 3  &bt BT_SEL 4  &bootloader
+&none        &none  &none       &none  &none  &none                  &out OUT_BLE  &kp C_VOL_DN  &kp K_MUTE        &kp C_VOL_UP  &bt BT_CLR    &studio_unlock
+&none        &none  &none       &none  &none  &none                  &out OUT_USB  &kp K_PREV    &kp K_PLAY_PAUSE  &kp K_NEXT    &none         &none
+                    &sys_reset  &none  &none  &none  &none    &none  &none         &none         &none             &sys_reset
             >;
 
             display-name = "Adjust";
