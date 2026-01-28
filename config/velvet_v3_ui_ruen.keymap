@@ -223,6 +223,17 @@
 
             label = "SWAPPER";
         };
+
+        en_tap: en_tap {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&to_en>,
+                <&macro_tap>,
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER &to_ru>;
+
+            label = "EN_TAP";
+        };
     };
 
     keymap {
@@ -263,10 +274,10 @@
         sym_nav_ru {
             display-name = "Symbols + Navigation ru";
             bindings = <
-&kp RU_NUMERO  &en TILDE  &en AT                 &en HASH                   &en DOLLAR                &en DQT                                         &kp RU_CYRILLIC_SHCHA  &kp HOME        &kp UP          &kp END          &kp PRCNT             &none
-&none          &kp PIPE   &en CARET              &hml RIGHT_SHIFT RU_COLON  &hml RIGHT_CONTROL EQUAL  &kp RU_SEMI                                     &kp INS                &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &hmr RIGHT_GUI PG_UP  &none
-&none          &en AMPS   &kp RU_QUESTION        &kp RU_EXCLAMATION         &kp RU_CYRILLIC_YERU      &kp RU_CYRILLIC_IO                              &kp DEL                &mkp MB1        &mkp MB3        &mkp MB2         &kp PG_DN             &none
-                          &swapper LEFT_ALT TAB  &swapper LCTRL TAB         &none                     &none               &none    &kp RC(BACKSPACE)  &lt2 6 RU_DOT          &none           &none           &none
+&kp RU_NUMERO  &en_tap TILDE  &en_tap AT             &en_tap HASH               &en_tap DOLLAR            &en_tap DQT                                     &kp RU_CYRILLIC_SHCHA  &kp HOME        &kp UP          &kp END          &kp PRCNT             &none
+&none          &kp PIPE       &en_tap CARET          &hml RIGHT_SHIFT RU_COLON  &hml RIGHT_CONTROL EQUAL  &kp RU_SEMI                                     &kp INS                &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &hmr RIGHT_GUI PG_UP  &none
+&none          &en_tap AMPS   &kp RU_QUESTION        &kp RU_EXCLAMATION         &kp RU_CYRILLIC_YERU      &kp RU_CYRILLIC_IO                              &kp DEL                &mkp MB1        &mkp MB3        &mkp MB2         &kp PG_DN             &none
+                              &swapper LEFT_ALT TAB  &swapper LCTRL TAB         &none                     &none               &none    &kp RC(BACKSPACE)  &lt2 6 RU_DOT          &none           &none           &none
             >;
         };
 
